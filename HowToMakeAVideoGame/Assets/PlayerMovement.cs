@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    /* We use 'FixedUpdate() method when you to mess with
+    /* We use 'FixedUpdate() method when you want to mess with
        physics stuff like "Adding Forces", "Changing Velocity", etc.
     */
     void FixedUpdate()
@@ -23,12 +23,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("d"))
         {
-            rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0);
+            rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
         if (Input.GetKey("a"))
         {
-            rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0);
+            rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
