@@ -13,19 +13,10 @@ public class FollowPlayer : MonoBehaviour
         transform.position = player.position + offset;
 
         // First person view. Camera inside player.
-        if (Input.GetKey("s"))
+        if (Input.GetKey(KeyCode.S))
         {
             transform.position = player.position;
         }
 
-    }
-
-    void FixedUpdate()
-    {
-        // First person view. Camera inside player.
-        if (Input.GetKey("s"))
-        {
-            transform.position = player.position;
-        }
     }
 }
