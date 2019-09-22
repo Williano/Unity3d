@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
         if (!gameHasEnded)
         {
             gameHasEnded = true;
-            CompleteLevel();
             Invoke("RestartGame", restartDelay);
 
         }
