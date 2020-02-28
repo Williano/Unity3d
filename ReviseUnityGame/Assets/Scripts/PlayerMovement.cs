@@ -23,12 +23,12 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKey("d"))
         {
-            Rb.AddForce(forwardForce * Time.deltaTime, 0, 0);
+            Rb.AddForce(forwardForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
         if (Input.GetKey("a"))
         {
-            Rb.AddForce(-forwardForce * Time.deltaTime, 0, 0);
+            Rb.AddForce(-forwardForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
