@@ -7,6 +7,6 @@ public class PlayerCollison : MonoBehaviour
     public PlayerMovement movement;
     private void OnCollisionEnter(Collision collision)
     {
-        movement.enabled = false;
+        movement.enabled = true;
     }
 }
